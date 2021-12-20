@@ -12,3 +12,8 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
