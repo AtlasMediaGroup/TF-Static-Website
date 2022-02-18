@@ -3,20 +3,51 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Website Coming Soon</title>
+  <title>TotalFreedom - The TF Network</title>
 
   <!-- CSS  -->
+  <script src="https://kit.fontawesome.com/4418425ecf.js" crossorigin="anonymous"></script>
   <link href="fonts/material-icons.css" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo center"><img src="img/TFLogo.png"></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li class="btn-flat"><a href="https://forum.totalfreedom.me"><i class="fas fa-comments"></i> Forum</a></li>
+        <li class="btn-flat"><a href="https://discord.com/invite/PW4savJR9a"><i class="fab fa-discord"></i> Discord</a>
+        </li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li class="btn-flat"><a href="https://world-download.totalfreedom.me"><i class="fas fa-download"></i> World
+            Downloader</a></li>
+            <li>          
+              <span class="server-status"><center>The TF Network is currently <b><span class="server-online"></span></b></span>
+            </li>
+      </ul>
+      
+
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="https://forum.totalfreedom.me" target="_blank"><i class="fas fa-comments"></i> FORUM</a></li>
+        <li><a href="https://discord.com/invite/PW4savJR9a" target="_blank"><i class="fab fa-discord"></i> DISCORD</a>
+        </li>
+        <li><a href="https://world-download.totalfreedom.me" target="_blank"><i class="fas fa-download"></i> WORLD
+            DOWNLOADER</a></li>
+      </ul>
+    </div>>
+  </nav>
+
+  
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center blue-text">Website Coming Soon!</h1>
+      <h1 class="header center blue-text">Welcome</h1>
       <div class="row center">
-        <h5 class="header col s12 light">We're working on the website, we'll be back up and running soon!</h5>
+        <h5 class="header col s12 light">A very warm welcome to the TotalFreedom / TF Network Website.</h5>
       </div>
       <div class="row center">
         <a href="https://forum.totalfreedom.me" id="download-button" class="btn-large waves-effect waves-light blue">Take Me To The Forums!</a>
@@ -32,18 +63,55 @@
   <div class="container">
     <div class="section">
 
-      <div class="card-panel green lighten-1"><center><b>Join the server on <b>play.totalfreedom.me</b></i></b></center></div>
-      
+      <div class="card-panel green lighten-1"><center><b>Join the server on <b>play.totalfreedom.me</b></b></center></div>
+
 
     </div>
     <br><br>
   </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About TotalFreedom</h5>
+          <p class="grey-text text-lighten-4">
+            The TotalFreedom Minecraft server was founded by Markbyron in November 2010. The server has a rich history of innovation and providing a game play experience like no other community. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Designed & Maintained by
+        <a
+          class="purple-text text-lighten-1"
+          href="https://www.twitter.com/wild1145">Ryan</a>
+      </div>
+    </div>
+  </footer>
 
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script>
+      MinecraftAPI.getServerStatus('play.totalfreedom.me', {
+          port: 25565 // optional, only if you need a custom port
+      }, function (err, status) {
+          if (err) {
+              return document.querySelector('.server-status').innerHTML = 'Error loading status';
+          }
+
+          // you can change these to your own message!
+          document.querySelector('.server-online').innerHTML = status.online ? '<span class="server-is-online">online</span>' : '<span class="server-is-offline">offline</span>';
+
+          // you can change these to your own message!
+          document.querySelector('.playercount').innerHTML = status.players.now ;
+      });
+  </script>
 
   </body>
 </html>
