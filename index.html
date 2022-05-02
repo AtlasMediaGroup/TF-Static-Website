@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>TotalFreedom</title>
+      <!-- Metadata -->
+      <meta charset="UTF-8">
+      <meta name="description" content="TotalFreedom is the first Free OP Minecraft server, which has been up and running since 2010! Join now at play.totalfreedom.me">
+      <meta name="keywords" content="TotalFreedom, Total, Freedom, Minecraft, OP, TF, free op, worldedit, creative, freebuild">
+      <meta name="author" content="Xenyfye, Folfy_Blue">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="referrer" content="origin">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Load CSS -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Load favicon -->
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+      <!-- Load JS -->
+      <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+      <script src="https://kit.fontawesome.com/0c3d3d413e.js" crossorigin="anonymous"></script>
+      <script src="js/script.js"></script>
+   </head>
+   <body>
+      <!-- LOGO -->
+      <div class="center">
+         <img id="logo" src="images/tflogo.png" alt="TotalFreedom">
+      </div>
+      <!-- SERVER IP -->
+      <div id="ip" class="center">
+         <p>Server IP</p>
+         <i class="fa-solid fa-angles-right"></i>
+         <a href="#" class="tf-yellow IPtooltip" onclick="copyIP()">play.totalfreedom.me <span class="IPtooltiptext">Click to copy!</span>
+         </a>
+      </div>
+      <!-- NAVIGATION START -->
+      <nav class="center">
+         <!-- FORUMS -->
+         <a href="http://forum.totalfreedom.me" rel="noopener noreferrer" class="btn">
+            <i class="fas fa-comments"></i>
+            Forum
+         </a>
+         <!-- DISCORD -->
+         <a href="https://discord.com/invite/PW4savJR9a" rel="noopener noreferrer" class="btn">
+            <i class="fab fa-discord"></i>
+            Discord
+         </div>
+         <!-- RULES -->
+         <a href="https://forum.totalfreedom.me/d/2961-totalfreedom-community-guidelines" rel="noopener noreferrer" class="btn">
+				<i class="fa-solid fa-book"></i>
+				Rules
+         </a>
+         <!-- VOTE -->
+         <a href="https://linktr.ee/totalfreedom" rel="noopener noreferrer" class="btn">
+            <i class="fa-solid fa-check-to-slot"></i>
+            Vote
+         </a>
+         <!-- WORLD DOWNLOADER -->
+         <a href="https://world-download.totalfreedom.me/" rel="noopener noreferrer" class="btn hidden-mobile">
+            <i class="fas fa-download"></i>
+            World&nbsp;Downloader
+         </a>
+      </nav>
+      <!-- PLAYER COUNT -->
+      <div id="players" class="center">
+         <p id="status">The network is currently <span id="server-status">???</span> with <span id="player-count">???</span> players. </p>
+      </div>
+   </body>
+</html>
